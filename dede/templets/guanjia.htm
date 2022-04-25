@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
+  <title>搜外内容管家</title>
+  <link href="css/base.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <form name="form" action="guanjia.php" method="post">
+    <input type='hidden' name='dopost' value='save' />
+    <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#ffffff"
+      style="margin-bottom:8px;">
+      <tr>
+        <td height="28" colspan="2" background="images/tbg.gif" style="padding-left:10px;">
+          <p><b> &gt; 搜外内容管家：</b></p>
+          <p>该插件需要配合搜外内容管家使用。token获取请访问 <a href="https://guanjia.seowhy.com/" target="_blank">https://guanjia.seowhy.com/</a><p>
+        </td>
+      </tr>
+      <tr>
+        <td height="38" width="15%" align="center" bgcolor="#FFFFFF"><b>TOKEN</b>
+          <span class="STYLE2" id="help2"> </span>
+        </td>
+        <td height="38" bgcolor="#FFFFFF">
+          <input name="token" type="text" id="token"
+            value="<?php if (!empty($config['token'])) { echo $config['token']; } ?>" class="pubinputs" />
+            内容管家对接的token
+        </td>
+      </tr>
+      <tr>
+        <td height="38" width="15%" align="center" bgcolor="#FFFFFF"><b>版本号</b>
+        </td>
+        <td height="38" bgcolor="#FFFFFF">
+          <?php if(!empty($config['version'])) { echo $config['version']; }  ?>
+        </td>
+      </tr>
+      <tr>
+        <td height="38" width="15%" align="center" bgcolor="#FFFFFF"><b>插件地址</b>
+        </td>
+        <td height="38" bgcolor="#FFFFFF">
+          <?php if(!empty($config['app_path'])) { echo $config['app_path']; }  ?>
+        </td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td height="38" height="40" colspan="2" align="center">
+          <input type="submit" name="Submit1" class='coolbg np' value="保存" /> &nbsp;
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
